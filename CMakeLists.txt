@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(main)
+include_directories(${/home/ESW_Project/Saliency_makefile_project})
+find_package( OpenCV REQUIRED )
+set(SOURCES opencv_saliency.cpp )
+add_executable( main opencv_saliency.cpp )
+target_link_libraries( main ${OpenCV_LIBS} )
